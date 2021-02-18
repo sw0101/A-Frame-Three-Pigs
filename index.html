@@ -1,0 +1,235 @@
+<html>
+<!--Sammy's 3 Little Pigs Project Febraruary 2,2021-->
+
+<head>
+    <script src="https://aframe.io/releases/1.1.0/aframe.min.js"></script>
+</head>
+
+<body>
+    <a-scene>
+        
+            <a-assets></a-assets><!--Texture for ground: https://texturehaven.com/tex/?c=terrain&t=brown_mud_02-->
+            <img id="ground" src="assets/ground.jpg">
+            <!--Texture for sky: https://hdrihaven.com/hdri/?h=moonlit_golf-->
+            <img id="sky" src="assets/sky.jpg">
+            <!--Texture for House base wood:https://texturehaven.com/tex/?c=wood&t=brown_planks_03-->
+            <img id="housebase" src="assets/housebase.jpg">
+            <!--Texture for House base wood:https://hdrihaven.com/hdri/?h=base_wood-->
+            <img id="siding" src="assets/siding.jpg">
+            <!-- Texture for roof: https://www.textures.com/download/RooftilesWood0091/123901-->
+            <img id="roof" src="assets/rooftexture.jpg">
+            <!--Doors For Builders: https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.doorsforbuilders.com%2FWood-Door.php%3FDoor%3DDB-ALU-B1_Wood-Aluminum-Matte-Light-Gray%26Type%3DFront%26cs%3DCustom%26DoorSeries%3DAluminum%26PG%3D%26dg%3D%26Line%3DALU-B1%26Glass%3D%26sl%3D%26Feature%3DAluminum%26Model%3DDB-ALU-B1&psig=AOvVaw1Ytmfggd5BaFVR2VPdrG6p&ust=1613010653013000&source=images&cd=vfe&ved=0CA0QjhxqFwoTCLDD8Ymj3u4CFQAAAAAdAAAAABAL-->
+            <img id="door" src="assets/door.jpg">
+            <!--Texture for Windows: https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pinterest.com%2Fpin%2F460211655648218104%2F&psig=AOvVaw3DF8NF5lltW2oCTqm0wHaV&ust=1613015163952000&source=images&cd=vfe&ved=0CA0QjhxqFwoTCPjziPGz3u4CFQAAAAAdAAAAABAD-->
+            <img id="window1" src="assets/Window1.png">
+            <!--Texture for Walkway: https://texturehaven.com/tex/?c=floor&t=square_floor-->
+            <img id="walkwayfloor" src="assets/walkwayfloor.jpg">
+            <!--Hay Texture: https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.123rf.com%2Fphoto_103537317_straw-dry-straw-hay-straw-yellow-background-texture.html&psig=AOvVaw2egSI6o12wXZb3XCms3lxd&ust=1613702710125000&source=images&cd=vfe&ved=0CA0QjhxqFwoTCLCWgJq18u4CFQAAAAAdAAAAABAP-->
+            <img id="hay" src="assets/hay.jpg">
+            <!--Bricks: https://texturehaven.com/tex/?c=bricks&t=castle_brick_07-->
+            <img id="bricks" src="assets/bricks.jpg">
+            <!--Chimney Bricks: https://texturehaven.com/tex/?c=bricks&t=castle_brick_07-->
+            <img id="chimneybricks" src="assets/chimneybricks.jpg">
+            <!--Sticks Testure: https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.stocksy.com%2F1390475%2Fstick-texture-california&psig=AOvVaw2IOAPFXtG0UzSY5D1DmLmt&ust=1613702423769000&source=images&cd=vfe&ved=0CA0QjhxqFwoTCMj9gpC08u4CFQAAAAAdAAAAABAD-->
+            <img id="sticks" src="assets/sticks.jpg">
+            <!--Barndoor: https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.homedepot.com%2Fp%2FMasonite-36-in-x-84-in-K-Bar-Auburn-Interior-Sliding-Barn-Door-Slab-with-Hardware-Kit-17446%2F311553785&psig=AOvVaw0czxasw_JUzp1JtYGzaSiM&ust=1613702802254000&source=images&cd=vfe&ved=0CA0QjhxqFwoTCMDAi8S18u4CFQAAAAAdAAAAABAM-->
+            <img id="barndoor" src="assets/barndoor.png">
+            <!--Barn Window: https://www.google.com/url?sa=i&url=https%3A%2F%2Fonlybarnwoodframes.com%2Fproducts%2Fwide-western-medium-4-pane-barn-window-mirror-frame-shop-picture&psig=AOvVaw1ops2KzD_snQ5lw4muefdX&ust=1613702981870000&source=images&cd=vfe&ved=0CA0QjhxqFwoTCIDW55m28u4CFQAAAAAdAAAAABAG-->
+            <img id="barnwindow" src="assets/barnwindow.png">
+            <img id="rusticwindow" src="assets/rusticwindow.png">
+            <!--Wood Door: https://www.google.com/url?sa=i&url=https%3A%2F%2Frealcraft.com%2Fproducts%2Fhorizontal&psig=AOvVaw0czxasw_JUzp1JtYGzaSiM&ust=1613702802254000&source=images&cd=vfe&ved=0CA0QjhxqFwoTCMDAi8S18u4CFQAAAAAdAAAAABAU-->
+            <img id="wooddoor" src="assets/wooddoor.png">
+            <!--Wolf: https://www.google.com/url?sa=i&url=https%3A%2F%2Fmysterystrumpet.medium.com%2Fthe-three-little-pigs-reimagined-b39c92fe30fd&psig=AOvVaw3SZdJ2_GFBRqz808kIxEiy&ust=1613704058026000&source=images&cd=vfe&ved=0CA0QjhxqFwoTCMD66M-88u4CFQAAAAAdAAAAABAK-->
+            <img id="wolf" src="assets/wolf.jpeg">
+            <!--Pigs: https://www.google.com/url?sa=i&url=https%3A%2F%2Fagirlatthewell.wordpress.com%2F2011%2F08%2F07%2Fjesus-and-the-three-little-pigs%2F&psig=AOvVaw0VCcyMVrw98cfyO1Rpe9Rt&ust=1613704496899000&source=images&cd=vfe&ved=0CA0QjhxqFwoTCPiusu-78u4CFQAAAAAdAAAAABAO-->
+            <img id="pigs" src="assets/pigs.jpg">
+            <!--Fireplace Video: https://www.youtube.com/watch?v=AB2Ykp4b0zM-->
+            <a-video id="fireplace" autoplay loop="true" src="assets/fireplacevid.mp4"></video>
+        </a-assets>
+
+        <!--House #1-->
+        <a-box position="210 -29 -90" rotation="0 390 0" scale="1 1 1" width="100" depth="100" height="2" color="#White"
+            src="#housebase">
+
+            <a-box position="0 25 -50" rotation="90 90 90" scale="1 1 1" width="100" depth="100" height="1.5"
+                color="#White" src="#sticks" repeat="4 3">
+            </a-box>
+            <a-box position="0 25 50" rotation="90 90 90" scale="1 1 1" width="100" depth="100" height="1.5"
+                color="#White" src="#sticks" repeat="4 3">
+            </a-box>
+            <a-box position="50 25 -1" rotation="90 0 90" scale="1 1 1" width="100" depth="100" height="1.5"
+                src="#sticks" repeat="4 3 "></a-box>
+            <a-box position="0 75 -1" rotation="0 0 0" scale="1 1 1" width="118" depth="100" height="1.5" src="#sticks"
+                repeat="4 3 "></a-box>
+            <a-triangle position="-50 75.5 0" rotation="0 90 0" vertex-a="0 15 0" vertex-b="-50 0 0" vertex-c="50 0 0"
+                side="double" src="#sticks" repeat="4 3">
+            </a-triangle>
+            <a-triangle position="50 75.5 0" rotation="0 90 0" vertex-a="0 15 0" vertex-b="-50 0 0" vertex-c="50 0 0"
+                side="double" src="#sticks" repeat="4 3">
+            </a-triangle>
+
+            <a-box position="-5 79 38" rotation="17 0 0" scale="1 1 1" width="110" depth="80" height="1.5"
+                src="#sticks">
+            </a-box>
+            <a-box position="-5 79 -38" rotation="-17 0 0" scale="1 1 1" width="110" depth="80" height="1.5"
+                src="#sticks"></a-box>
+
+            <!--Door Unit (Front)-->
+
+            <!--Divider Panel-->
+            <a-box position="-50 25 -1" rotation="90 0 90" scale="1 1 1" width="35" depth="100" height="1.5"
+                src="#sticks" repeat="1 1 "></a-box>
+            <!--Door-->
+            <a-box position="-60 37 -40" rotation="90 -45 90" scale="1 1 1" width="30" depth="72" height="1.5"
+                src="#wooddoor" repeat="1 1 "></a-box>
+            <!--Window #1-->
+            <a-box position="-50 39 33" rotation="90 0 90" scale="1 1 1" width="33" depth="73" height="1.5"
+                src="#rusticwindow" repeat="2 3 "></a-box>
+            <!--Window #2-->
+            <a-box position="50.5 39 33" rotation="90 0 90" scale="1 1 1" width="33" depth="73" height="1.5"
+                src="#rusticwindow" repeat="2 3 "></a-box>
+            <a-box position="49.8 39 33" rotation="90 0 90" scale="1 1 1" width="33" depth="73" height="1.5"
+                src="#rusticwindow" repeat="2 3 "></a-box>
+
+        </a-box>
+        <!--House #2-->
+        <a-box position="-210 -29 -90" rotation="0 145 0" scale="1 1 1" width="100" depth="100" height="2"
+            color="#White" src="#housebase">
+
+            <a-box position="0 25 -50" rotation="90 90 90" scale="1 1 1" width="100" depth="100" height="1.5"
+                color="#White" src="#hay" repeat="4 3">
+            </a-box>
+            <a-box position="0 25 50" rotation="90 90 90" scale="1 1 1" width="100" depth="100" height="1.5"
+                color="#White" src="#hay" repeat="4 3">
+            </a-box>
+            <a-box position="50 25 -1" rotation="90 0 90" scale="1 1 1" width="100" depth="100" height="1.5" src="#hay"
+                repeat="4 3 "></a-box>
+            <a-box position="0 75 -1" rotation="0 0 0" scale="1 1 1" width="118" depth="100" height="1.5" src="#hay"
+                repeat="4 3 "></a-box>
+            <a-triangle position="-50 75.5 0" rotation="0 90 0" vertex-a="0 15 0" vertex-b="-50 0 0" vertex-c="50 0 0"
+                side="double" src="#hay" repeat="4 3">
+            </a-triangle>
+            <a-triangle position="50 75.5 0" rotation="0 90 0" vertex-a="0 15 0" vertex-b="-50 0 0" vertex-c="50 0 0"
+                side="double" src="#hay" repeat="4 3">
+            </a-triangle>
+
+            <a-box position="-5 79 38" rotation="17 0 0" scale="1 1 1" width="110" depth="80" height="8" src="#hay">
+            </a-box>
+            <a-box position="-5 79 -38" rotation="-17 0 0" scale="1 1 1" width="110" depth="80" height="8" src="#hay">
+            </a-box>
+
+            <!--Door Unit (Front)-->
+
+            <!--Divider Panel-->
+            <a-box position="-50 25 -1" rotation="90 0 90" scale="1 1 1" width="35" depth="100" height="1.5" src="#hay"
+                repeat="1 1 "></a-box>
+            <!--Door-->
+            <a-box position="-60 37 -40" rotation="90 -45 90" scale="1 1 1" width="30" depth="72" height="1.5"
+                src="#barndoor" repeat="1 1 "></a-box>
+            <!--Window #1-->
+            <a-box position="-50 39 33" rotation="90 0 90" scale="1 1 1" width="33" depth="73" height="1.5"
+                src="#barnwindow" repeat="2 3 "></a-box>
+            <!--Window #2-->
+            <a-box position="50.5 39 33" rotation="90 0 90" scale="1 1 1" width="33" depth="73" height="1.5" src="#hay"
+                repeat="1 1 "></a-box>
+            <a-box position="49.8 39 33" rotation="90 0 90" scale="1 1 1" width="33" depth="73" height="1.5" src="#hay"
+                repeat="1 1 "></a-box>
+
+
+
+
+
+        </a-box>
+        <!--House #3-->
+        <a-box position="0 -29 -200" rotation="0 90 0" scale="1 1 1" width="100" depth="100" height="2" color="#White"
+            src="#housebase">
+
+            <a-box position="0 25 -50" rotation="90 90 90" scale="1 1 1" width="100" depth="100" height="1.5"
+                color="#White" src="#bricks" repeat="4 3">
+            </a-box>
+            <a-box position="0 25 50" rotation="90 90 90" scale="1 1 1" width="100" depth="100" height="1.5"
+                color="#White" src="#bricks" repeat="4 3">
+            </a-box>
+            <a-box position="50 25 -1" rotation="90 0 90" scale="1 1 1" width="100" depth="100" height="1.5"
+                src="#bricks" repeat="4 3 "></a-box>
+            <a-box position="0 75 -1" rotation="0 0 0" scale="1 1 1" width="118" depth="100" height="1.5" src="#bricks"
+                repeat="4 3 "></a-box>
+            <a-triangle position="-50 75.5 0" rotation="0 90 0" vertex-a="0 15 0" vertex-b="-50 0 0" vertex-c="50 0 0"
+                side="double" src="#bricks" repeat="4 3">
+            </a-triangle>
+            <a-triangle position="50 75.5 0" rotation="0 90 0" vertex-a="0 15 0" vertex-b="-50 0 0" vertex-c="50 0 0"
+                side="double" src="#bricks" repeat="4 3">
+            </a-triangle>
+            <!--Chimney-->
+            <a-box position="-38 60 -9.8" rotation="90 90 90" scale="1 1 1" width="10" depth="120" height="10"
+                color="#White" src="#chimneybricks" repeat="1 1">
+                <!--Fireplace in brick house-->
+            </a-box>
+            <a-box position="-40 20 -2.5" rotation="0 0 0" scale="1 1 1" width="20" depth="25" height="20"
+                color="#White" src="#fireplace" repeat="4 3"></a-box>
+            <a-box position="-40 5 -2.5" rotation="0 0 0" scale="1 1 1" width="20" depth="25" height="10" color="#White"
+                src="#siding" repeat="4 3"></a-box>
+
+
+
+
+            <a-box position="-5 79 38" rotation="17 0 0" scale="1 1 1" width="110" depth="80" height="1.5" src="#roof">
+            </a-box>
+            <a-box position="-5 79 -38" rotation="-17 0 0" scale="1 1 1" width="110" depth="80" height="1.5"
+                src="#roof"></a-box>
+
+            <!--Door Unit (Front)-->
+
+            <!--Divider Panel-->
+            <a-box position="-50 25 -1" rotation="90 0 90" scale="1 1 1" width="35" depth="100" height="1.5"
+                src="#bricks" repeat="1 1 "></a-box>
+            <!--Door-->
+            <a-box position="-60 37 -40" rotation="90 -45 90" scale="1 1 1" width="30" depth="72" height="1.5"
+                src="#door" repeat="1 1 "></a-box>
+            <!--Window #1-->
+            <a-box position="-50 39 33" rotation="90 0 90" scale="1 1 1" width="33" depth="73" height="1.5"
+                src="#window1" repeat="1 1 "></a-box>
+            <!--Window #2-->
+            <a-box position="50.5 39 33" rotation="90 0 90" scale="1 1 1" width="33" depth="73" height="1.5"
+                src="#window1" repeat="1 1 "></a-box>
+            <a-box position="49.8 39 33" rotation="90 0 90" scale="1 1 1" width="33" depth="73" height="1.5"
+                src="#window1" repeat="1 1 "></a-box>
+
+
+
+
+
+        </a-box>
+        <!--Walkway-->
+        <a-box position="0 -29 20" rotation="0 0 0" scale="1 1 1" width="250" depth="220" height="2" color="#White"
+            src="#bricks" repeat="5 5">
+        </a-box>
+
+        <!--Wolf-->
+        <a-box position="-105 -5 -150" rotation="0 15 0" scale="1 1 1" width="50" depth="5" height="40" color="#White"
+            src="#wolf" repeat="1 1">
+        </a-box>
+
+        <!--Pigs-->
+        <a-box position="105 -20 -150" rotation="0 -15 0" scale="1 1 1" width="30" depth="5" height="20" color="#White"
+            src="#pigs" repeat="1 1">
+        </a-box>
+
+
+
+
+        <!--Camera Speed & Controls-->
+        <a-entity camera look-controls wasd-controls="acceleration: 500">
+        </a-entity>
+
+
+
+        <a-plane position="0 -30 0" rotation="-90 0 0" width="1000" height="1000" src="#ground">
+
+        </a-plane>
+        <a-sky src="#sky"></a-sky>
+
+    </a-scene>
+</body>
+
+</html>
